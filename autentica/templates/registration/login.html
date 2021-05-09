@@ -1,0 +1,38 @@
+<!doctype html> {% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+<div class="col-md-4 pt-5">
+    {% if form.errors %}
+    <p>La username e la password non corrispondono a nessun utente controllate.</p>
+    {% endif %}
+
+    <!-- {% if next %}
+    {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+    {% else %}
+        <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %} -->
+
+    <!-- https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views -->
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %} {{ form|crispy }}
+        <!-- <table>
+            <tr>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table> -->
+
+        <input type="submit" class="btn btn-outline-info mt-2" value="Autentica">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+
+    {# Assumes you setup the password_reset view in your URLconf #}
+    <p><a href="{% url 'password_reset' %}">Password dimenticata?</a></p>
+</div>
+{% endblock content %}

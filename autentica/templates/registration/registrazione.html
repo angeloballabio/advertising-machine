@@ -1,0 +1,9 @@
+<!doctype html> {% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+<div class="col-md-4 pt-5">
+    <h1>Registrazione utente</h1>
+    <form method="post" novalidate>
+        {% csrf_token %} {{ form|crispy }}
+        <button type="submit" class="btn btn-outline-primary">Crea un nuovo utente</button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,61 @@
+body {
+    background-color: #f8f5f1 !important;
+    text-align: center;
+}
+
+.navbar {
+    padding: 0 0;
+}
+
+.container-fluid {
+    padding: 0 15% !important;
+    /*  padding-left: 30% !important; */
+    /* padding-right: 30%; */
+}
+
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+    /* font-family: 'Comic Neue', cursive; */
+    font-weight: bold;
+    font-size: 3rem !important;
+}
+
+.titolo-homepage {
+    font-weight: bold;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 5rem;
+}
+
+.titolo-coda {
+    font-weight: bold;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 4rem;
+}
+
+.card {
+    background-color: #f8f5f1;
+}
+
+.cr_nome {
+    border: 1px solid black;
+    /* padding: 1% 0; */
+    margin: auto 0;
+}
+
+.cr_secondi {
+    border: 1px solid black;
+    /* padding: 1% 0; */
+}
+
+.hr {
+    color: black;
+}
+
+.lista {
+    display: inline;
+}
+
+.rigo {
+    border: 1px solid black;
+    display: inline !important;
+}

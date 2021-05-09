@@ -1,0 +1,39 @@
+<!doctype html> {% extends "base.html" %} {% block content %}
+<div class="container-fluid text-center pt-5">
+    <h1 class="titolo-coda">Crea la coda delle pubblicita</h1>
+</div>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="row col-md-6">
+
+            <div class="col-md-7 cr_nome text-center">
+                <span>Nome pubblicita</span>
+            </div>
+            <div class="col-md-4 cr_secondi text-center">
+                <span class="text-center">Tempo esposizione</span>
+            </div>
+            {% for cartella in cartelle %}
+
+
+            <!-- <div class="row col-md-6"> -->
+            <div class="col-md-7 cr_nome">
+                <!-- <input type="text" value="{{ cartella.nome_cartella }}" class="form-control" readonly> -->
+                <a href="" class="hr"><span>{{ cartella.nome_cartella }}</span></a>
+            </div>
+            <div class="col-md-4 cr_secondi text-center">
+                <!-- <input type="text" value="{{ cartella.tempo_riproduzione }}" class="form-control"> -->
+                <a href="" class="hr"><span>{{ cartella.tempo_riproduzione }}</span></a>
+            </div>
+            <!-- </div> -->
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <p>posizione</p>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

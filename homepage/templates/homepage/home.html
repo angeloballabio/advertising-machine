@@ -1,0 +1,26 @@
+<!doctype html>{% extends "base.html" %} {% block content %}
+<div class="container-fluid text-center pt-5">
+    <h1 class="titolo-homepage">Advertising machine</h1>
+
+    <div class="row lista">
+        <div class="card col-md-6" style="width: 18rem;">
+            <img src="/static/immagini/costruzione2.jpg" class="card-img-top " alt="costruzione">
+            <div class="card-body">
+                <h5 class="card-title">Inserimento pubblicita</h5>
+                <p class="card-text">Crea la sequenza pubblicitaria.</p>
+                <a href="{% url 'crea_pubblicita' %}" class="btn btn-primary">Prepara</a>
+            </div>
+        </div>
+        <div class="card col-md-6" style="width: 18rem;">
+            <img src="/static/immagini/ingranaggi2.jpg" class="card-img-top " alt="ingranaggio">
+            <div class="card-body">
+                <h5 class="card-title">Avvia presentazione</h5>
+                <p class="card-text">Fai partire la presentazione.</p>
+                <a href="{% url 'mostra_pubblicita' %}" class="btn btn-primary">Avvia</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock content %}
